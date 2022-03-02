@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 10px;
+            margin:5px;
+            border:1px solid silver;
+            color:white;
+            border-radius:4px;
+            background: grey;
+        }
+        textarea{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+ 
+        <textarea name="" id="box" cols="50" rows="40"></textarea><br>
+        <div style="display: flex;align-items: center;margin-top:30px;"> 
+            <button class="btn" id="btncopy">copiar</button> 
+            <button class="btn" id="btndelete">deletar</button> 
+            <button class="btn" id="btnundo">retroceder</button>  
+            <button class="btn" id="btnredo">avançar</button> 
+            <button class="btn" id="btnlink">gerarlink</button>  
+        </div>
+    <script>
+
+
+        document.querySelector("#btncopy").onclick = ()=>{
+            document.querySelector("#box").select();
+            document.execCommand('copy');
+        }
+             
+        document.querySelector("#btnlink").onclick = ()=>{ 
+            document.execCommand("insertImage");
+        }
+
+
+        document.querySelector("#btndelete").onclick = ()=>{
+            document.querySelector("#box").select();
+            document.execCommand("delete");
+        }
+
+        document.querySelector("#btndelete").onclick = ()=>{
+            document.querySelector("#box").select();
+            document.execCommand("delete");
+        }
+        document.querySelector("#btnundo").onclick = ()=>{ 
+            document.execCommand("undo");
+        }
+
+        document.querySelector("#btnredo").onclick = ()=>{ 
+            document.execCommand("Redo");
+        }
+
+
+        function commands(params) {
+          const cmd =   document.execCommand;
+          cmd("forwardDelete");
+          cmd("insertHorizontalRule");
+          cmd("insertHtml");
+          cmd("insertImage");
+          cmd("insertLineBreak");
+          cmd("insertOrderedList");
+          cmd("insertParagrapth");
+          cmd("insertText");
+          cmd("insertUnorderedList");
+          cmd("justifyCenter");
+          cmd("justifyFull");
+          cmd("justifyLeft");
+          cmd("justifyRight");
+          cmd("outdent");
+          cmd("paste");
+          cmd("backColor", true, "red");
+          cmd("bold");
+          cmd("createLink");
+          cmd("copy");
+          cmd("cut");
+          cmd("defaultparagrapthSeparator");
+          cmd("delete");
+          cmd("fontname");
+          cmd("fontSize", true , "30px");
+          cmd("foreColor");
+          cmd("Redo");
+          cmd("selectAll");
+          cmd("strikeThrough");
+          cmd("styleWithCss");
+          cmd("subscript");
+          cmd("superScript");
+          cmd("undo");
+          cmd("unlink");
+          cmd("useCss"); 
+        }
+    </script>
+</body>
+</html>

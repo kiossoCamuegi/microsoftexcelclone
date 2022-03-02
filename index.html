@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsft excel</title>
+    <title>Microsoft excel</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="./icons/excel.png" type="image/x-icon">
 </head>
 <body>
+<div class="loader d-none">
+    <div class="intro-box">
+
+    </div>
+</div>
  <div class="excel-area">
+ <button class="btn expand-box" id="expand-btn"><img src="./icons/expand.png" alt=""></button>
   <aside class="excel-tab">
     <section class="excel-tab-header">
         <div class="top">
@@ -18,7 +24,7 @@
                 <div class="flex-item"><button class="save-file fa fa-save"></button></div>
                 <div class="flex-item">
                     <button class="undo-file-changes fa fa-undo"></button>
-                    <div class="drop-down-top drop-down-undo fa fa-angle-down">
+                    <div class="drop-down-top drop-down-undo fa fa-caret-down">
                         <ul>
                             
                         </ul>
@@ -26,7 +32,7 @@
                 </div>
                 <div class="flex-item">
                     <button class="redo-file-changes fa fa-rotate-right"></button>
-                    <div class="drop-down-top drop-down-redo fa fa-angle-down">
+                    <div class="drop-down-top drop-down-redo fa fa-caret-down">
                         <ul>
                             
                         </ul>
@@ -36,7 +42,7 @@
                     <div class="drop-down-top drop-down-custumize-window">
                         <div class="block">
                             <i class="fa fa-minus"></i>
-                            <i class="fa fa-angle-down"></i>
+                            <i class="fa fa-caret-down"></i>
                         </div>
                         <ul>
                             
@@ -44,10 +50,11 @@
                     </div>
                  </div>
             </article>
-            <article class="sheet-title text-white"><h5>My document title * </h5></article>
+            <article class="sheet-title text-white"><h5>Novo(a) Microsoft Excel Worksheet * </h5></article>
             <article class="excel-window-controls">
                    <li class="minimaze-window-btn fa fa-minus"></li>
-                   <li class="minimaze-window-btn fa "></li>
+                   <li class="maximize-window-btn "></li>
+                   <li class="close-window-btn fa fa-close"></li>
             </article>
         </div>
           <div class="tab-header-list">
@@ -79,34 +86,362 @@
     </section>
     <section class="excel-tab-body">
         <aside class="active" id="base-menu">
-            <article class="base-box">
-                  <!--start menu-->    1
-
-                  <!---end menu-->
+            <article class="base-box base-box-1">
+                  <li class="drop-paste-type">
+                   <span>
+                       <img src="./icons/tab/area/1.PNG" alt="">
+                       <i class="fa fa-caret-down"></i>
+                   </span>
+                    <ul>
+                         <div class="drop-header">Opções de colagem :</div>
+                         <div class="drop-body">
+                             <a href="#" id="#"><img src="./icons/tab/p1.png" alt=""></a>
+                             <a href="#" id="#"><img src="./icons/tab/p2.png" alt=""></a>
+                         </div>
+                         <div class="drop-footer">
+                             <a href="" title="" id="">Colar especial ...</a>
+                         </div>
+                    </ul>
+                  </li>
+                  <li>
+                      <button><img class="rotate-v" src="./icons/tab/area/2.PNG" alt="">Cortar</button>
+                      <div class="drop-copy-container">
+                        <button id="drop-copy-type"><img src="./icons/tab/area/3.PNG" alt="">Copiar<i class="fa fa-caret-down"></i></button>
+                        <ol class="drop-copy-item">
+                            <span id=""><img src="./icons/tab/copy.png" alt="">Copiar</span>  
+                            <span id="">Copiar de imagem ...</span>
+                        </ol> 
+                      </div>
+                      <button id="" class="fp" ><img src="./icons/tab/area/4.PNG" alt="">Pincel de Formatação</button>
+                  </li>
+                  <div class="rd-only">Área de transferencia</div>
             </article>
-            <article class="base-box">
-                <!--start menu-->    2
+            <article class="base-box" id="type-of-letter">
+                <!--start menu-->   
+                   <div class="flex">
+                       <div class="font-select">
+                            <main>
+                                <div class="d-flex">
+                                    <input type="text" value="" data-font="" id="font-type">
+                                    <div class="drop-icon fa fa-caret-down"></div>
+                                 </div>
+                                 <div class="font-select-data">
+      
+                                 </div>
+                            </main>
+                            <main>
+                                <div class="d-flex">
+                                    <input type="text"  value="" data-font=""  id="font-type">
+                                    <div class="drop-icon fa fa-caret-down"></div>
+                                 </div>
+                                 <div class="font-select-data">
+      
+                                 </div>
+                            </main>
+                           <section class="letter-size ">
+                               <li class="lt-sz" id="">
+                                   <span>A</span>
+                                   <div class="drop-icon fa fa-caret-up"></div>
+                               </li>
+                               <li class="lt-sz" id="">
+                                <span>A</span>
+                                <div class="drop-icon fa fa-caret-down"></div>
+                            </li>
+                           </section>
+                       </div>
+                       <div class="flex text-props">
+                         <div class="d-flex">
+                            <li id="bold-text"><img src="./icons/tab/letter/bold.png" alt=""></li>
+                            <li id="italic-text"><img src="./icons/tab/letter/italic.png" alt=""></li>
+                            <li id="underline-text">
+                                <img src="./icons/tab/letter/underline.png" alt="">
+                                <div class="drop-icon fa fa-caret-down"></div>
+                                <div class="drop-underline-container">
 
+                                </div>
+                            </li>
+                            <div><div class="b"></div></div> 
+                                  <div class="table-limits">
+                                      <div class="flex-box">
+                                       <div class="flex-box">
+                                        <img src="./icons/tab/letter/bb.png" alt="">
+                                        <div class="drop-icon fa fa-caret-down"></div>
+                                       </div>
+                                          <div class="drop-border-container">
+
+                                          </div>
+                                      </div>
+                                  </div>
+                            <div><div class="b"></div></div> 
+                              <div class="drop-background-color">
+                                  <div class="box">
+                                   <div class="flex-box">
+                                    <img src="./icons/tab/letter/fill.png" alt="">
+                                    <i class="fa fa-caret-down"></i>
+                                   </div>
+                                  </div>
+                                  <div class="line" id="selected-text-color"></div>
+                                  <aside class="drop-background-container">
+
+                                  </aside>
+                              </div>
+                              <div class="drop-text-colors">
+                                  <div class="box"><h5>A  <i class="fa fa-caret-down"></i></h5></div>
+                                  <div class="line" id="selected-background-color"></div>
+                                 <div class="drop-text-container">
+
+                                 </div>
+                              </div>
+                         </div> 
+                        </div> 
+                   </div>
+                <div class="rd-only">Tipo de letra</div>
                 <!---end menu-->
             </article>
-            <article class="base-box">
-                <!--start menu-->    3
+            <article class="base-box" id="text-alignment">
+                <!--start menu-->    
+                    <div class="d-flex">
+                        <article>
+                            <div class="box">
+                                  <li class="txt-align align-top" text-to="right"><img src="./icons/tab/alignment/1.png" alt=""></li>
+                                  <li class="txt-align align-middle" text-to="right"><img src="./icons/tab/alignment/1.png" alt=""></li>
+                                  <li class="txt-align align-bottom" text-to="right"><img src="./icons/tab/alignment/1.png" alt=""></li>
+                                 <div class="b"></div>
+                                 <li class="orientation text-orientation-drop">
+                                     <div class="box">
+                                        <div class="item">
+                                            <div><span>ab</span></div>
+                                            <div> <img src="./icons/tab/alignment/right.png" alt=""></div>
+                                         </div>
+                                         <i class="fa fa-caret-down"></i>
+                                     </div>
+                                     <div class="drop-orientation-container">
 
-                  <!---end menu-->
-            </article>
-            <article class="base-box">
-                <!--start menu-->    4
+                                     </div>
+                                 </li>
+                            </div>
+                            <div class="box">
+                                <li class="txt-align align-to-right" text-to="right"><img src="./icons/tab/alignment/2.png" alt=""></li>
+                                <li class="txt-align align-to-right" text-to="right"><img src="./icons/tab/alignment/3.png" alt=""></li>
+                                <li class="txt-align align-to-right" text-to="right"><img src="./icons/tab/alignment/4.png" alt=""></li>
+                                <div class="b"></div>
+                                <li class="dm"><img src="./icons/tab/alignment/0.png" alt="#"></li>
+                                <li class="dm"><img src="./icons/tab/alignment/00.png" alt="#"></li>
+                            </div>
+                        </article>
+                        <div class="bar"></div>
+                        <article class="last-box">
+                            <div class="resize-text"><img src="./icons/tab/alignment/000.PNG" alt=""> Moldar texto</div>
+                            <li class="join-and-centralizate-drop">
+                                <div class="resize-text"><img src="./icons/tab/alignment/0000.PNG" alt=""> Unir e centrar<i class="fa fa-caret-down"></i></div>
+                                <div class="join-and-center-box">
 
-                  <!---end menu-->
+                                </div>
+                            </li>
+                        </article>
+                    </div>
+                 <div class="rd-only">Alinhamento</div>
+                <!---end menu-->
             </article>
-            <article class="base-box">
-                <!--start menu-->    5
+            <article class="base-box" id="numb-box">
+                <!--start menu-->    
+                    <div class="select-type-box">
+                        <div class="flex">
+                            <input type="text" id="" class="form-control" value="Geral" placeholder="">
+                            <div class="drop-icon">
+                                <i class="fa fa-caret-down"></i>
+                            </div>
+                        </div>
+                        <div class="drop-container">
 
-                  <!---end menu-->
+                        </div>
+                    </div>
+                    <div class="flex">
+                       <div class="drop">
+                        <li class="drop-num-count" id="">
+                            <img src="./icons/tab/numbers/1.PNG" alt="">
+                            <i class="fa fa-caret-down"></i>
+                        </li>
+                           <div class="drop-container">
+
+                           </div>
+                       </div>
+                      <ul>
+                        <li class="fa fa-percent" id="percentage-style"></li>
+                        <li id="separator-style">000</li>
+                        <div class="bar"></div>
+                        <li id="increase-decimal-places"><img src="./icons/tab/numbers/2.PNG" alt=""></li> 
+                        <li id="decrease-decimal-places"><img src="./icons/tab/numbers/3.PNG" alt=""></li>  
+                      </ul>
+                    </div>
+                <div class="rd-only">Número</div> 
+                <!---end menu-->
             </article>
-            <article class="base-box">6</article>
-            <article class="base-box">7</article>
-            <article class="base-box">8</article>
+            <article class="base-box base-box-5" id="style-box">
+                <!--start menu-->    
+                    <section class="block">
+                        <div class="flex">
+                         <div class="box-flex">
+                            <li class="drop-conditional-format d-none" id="">
+                                <img src="./icons/tab/styles/1.PNG" alt="">
+                               <span>Formatação condicional  <i class="fa fa-caret-down"></i></span> 
+                               <ul class="drop-container">
+       
+                               </ul>
+                              </li>
+                              <li class="drop-table-format d-none" id="">
+                                 <img src="./icons/tab/styles/2.PNG" alt="">
+                                <span>Formatar como Tabela  <i class="fa fa-caret-down"></i></span> 
+                                <ul class="drop-container">
+        
+                                </ul>
+                               </li>
+                               <li class="drop-cell-style d-none">
+                                 <img src="./icons/tab/styles/3.PNG" alt="">
+                                 <span>Estilos de Célula <i class="fa fa-caret-down"></i></span> 
+                                 <ul class="drop-container">
+         
+                                 </ul>
+                               </li>
+                         </div>
+                           <main>
+                            <div class="table-style-box">
+                                <div class="default-styles">
+                                   <ol>
+                                       <li class="tb-style nm-table" id="" data-style="">Normal</li>
+                                       <li class="tb-style cr-table" id="" data-style="">Correto</li>
+                                       <li class="tb-style ic-table" id="" data-style="">Incorreto</li>
+                                       <li class="tb-style nt-table" id="" data-style="">Neutro</li>
+                                       <li class="tb-style ccl-table" id="" data-style="">Cálculo</li>
+                                       <li class="tb-style clon-table" id="" data-style="">Célula Ligada</li>
+                                       <li class="tb-style clinput-table" id="" data-style="">Entrada</li>
+                                       <li class="tb-style clnote-table" id="" data-style="">Nota</li>
+                                   </ol>
+                                </div>
+                                <div class="scroll-bars">
+                                    <ul class="scroll-items">
+                                        <li class="fa fa-caret-up active-scroll" id="scroll-top"></li>
+                                        <li class="fa fa-caret-down" id="scroll-down"></li>
+                                    </ul>
+                                    <li id="show-all-table-style">
+                                        <i class="fa fa-minus"></i>
+                                        <i class="fa fa-caret-down"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <div class="table-style-drop-container" id="">
+
+                            </div>
+                           </main>
+                         </div>
+                    </section>
+                    <section class="block"></section>
+                    <section class="block"></section>
+                <div class="rd-only">Estilos</div> 
+                <!---end menu-->
+            </article>
+            <article class="base-box" id="cells-box">
+            <!--start menu-->    
+           <div class="flex">
+            <li class="drop-item" id="">
+                <div class="block">
+                    <img src="./icons/tab/cells/1.PNG" alt="">
+                    <span>Inserir</span>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="drop-container" id="">
+
+                </div>
+            </li>
+            <li class="drop-item" id="">
+               <div class="block">
+                   <img src="./icons/tab/cells/2.PNG" alt="">
+                   <span>Eliminar</span>
+                   <i class="fa fa-caret-down"></i>
+               </div>
+               <div class="drop-container" id="">
+
+               </div>
+           </li>
+           <li class="drop-item" id="">
+               <div class="block">
+                   <img src="./icons/tab/cells/3.PNG" alt="">
+                   <span>Formatar</span>
+                   <i class="fa fa-caret-down"></i>
+               </div>
+               <div class="drop-container" id="">
+
+               </div>
+           </li>
+           </div>
+            <div class="rd-only">Células</div> 
+            <!---end menu-->
+            </article>
+            <article class="base-box" id="edit-box">
+                <!--start menu-->    
+                <div class="flex">
+                    <div class="block">
+                        <ul>
+                            <li id="" class="ed-item">
+                               <div class="flex">
+                                <img src="./icons/tab/edit/4.png" alt="">
+                                <span>Soma Automática</span>
+                                <i class="fa fa-caret-down"></i>
+                               </div>
+                                <div class="ed-item-drop-container" id="">
+                                  
+                                </div>
+                            </li>
+                            <li id="" class="ed-item">
+                                <div class="flex">
+                                    <img src="./icons/tab/edit/1.PNG" alt="">
+                                    <span>Preenchimento</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div class="ed-item-drop-container" id="">
+                                  
+                                </div>
+                            </li>
+                            <li id="" class="ed-item">
+                              <div class="flex">
+                                <img src="./icons/tab/edit/5.png" alt="">
+                                <span>Limpar</span>
+                                <i class="fa fa-caret-down"></i>
+                              </div>
+                              <div class="ed-item-drop-container" id="">
+
+                              </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <ul>
+                            <li id="" class="ed-item">
+                                <div class="flex">
+                                 <img src="./icons/tab/edit/2.PNG" alt="">
+                                 <span>Ordernar e Filtar</span>
+                                 <i class="fa fa-caret-down"></i>
+                                </div>
+                                 <div class="ed-item-drop-container" id="">
+                                   
+                                 </div>
+                             </li>
+                             <li id="" class="ed-item">
+                                <div class="flex">
+                                 <img src="./icons/tab/edit/3.PNG" alt="">
+                                 <span>Localizar e Selecionar</span>
+                                 <i class="fa fa-caret-down"></i>
+                                </div>
+                                 <div class="ed-item-drop-container" id="">
+                                   
+                                 </div>
+                             </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rd-only">Editar</div> 
+                <!---end menu-->
+            </article> 
              <div class="toggle-menu">
                  <li class="fa fa-angle-up"></li>
              </div>     
@@ -120,24 +455,38 @@
   </aside>
 <!----workspace-->
 <aside class="excel-workspace">
-    <aside class="top-line"></aside>
+    <aside class="top-line">
+        <div class="left-box"><select name="" class="form-control" id=""></select></div>
+        <div class="bars"><i class="fa fa-ellipsis-v"></i></div>
+        <div class="center-box">
+            <div class="box"></div>
+        </div>
+        <div class="right-box">
+            <div class="select-content">
+               <input type="text" class="form-control">
+                <div class="drop"><i class="fa fa-caret-down"></i></div>
+            </div>
+        </div>
+    </aside>
     <div class="container-work">
         <div class="select-all"></div>
         <aside class="left-bar">
             <!--
-                 <div class="row-name" id="rowCode-1">1</div>
-                 <div class="row-name" id="rowCode-2">2</div>
+                 <div class="row-name" id="rowCode-1">1 mv-clh</div>
+                 <div class="row-name" id="rowCode-2">2 mv-clh</div>
             -->
         </aside>
         <aside class="work-container">
             <div class="columns-name">
-                <div class="rectangle fa fa-angle-right d-none"></div>
+                <div class="rectangle fa fa-angle-right "></div>
                <!--
                 <div class="column-name" id="col-code-a code-id-1">A <div class="mv-cl" cl-code=""></div> </div>
                 <div class="column-name" id="col-code-a code-id-1">B <div class="mv-cl" cl-code=""></div></div>
                -->
             </div> 
-             <div class="input-cell-container"> 
+             <div class="input-cell-container">  
+                 <div class="cells-cursor"><img src="./icons/cursor-plus.png" alt=""></div>
+                 
                  <!--
                     <section class="cell-row">
                        <div  contenteditable="true" class="form-control input" id="row-1-col-1 " data-input="input-code-A"> </div>     
@@ -147,8 +496,7 @@
                         <div  contenteditable="true" class="form-control input" id="row-1-col-1 " data-input="input-code-A"> </div>     
                         <div  contenteditable="true" class="form-control input" id="row-1-col-1 " data-input="input-code-A"> </div>    
                     </section>
-                 -->
-                    
+                 --> 
                 
              <!---Workspace contextmenu -->
                 <section class="main-contextmenu">
@@ -188,6 +536,6 @@
  </section>
  <script src="js/jquery.min.js"></script>
  <script src="js/bootstrap.js"></script>   
- <script src="js/main.js"></script> 
+ <script defer src="js/main.js"></script> 
 </body>
 </html>
